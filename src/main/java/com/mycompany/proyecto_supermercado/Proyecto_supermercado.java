@@ -11,6 +11,6 @@ package com.mycompany.proyecto_supermercado;
 public class Proyecto_supermercado {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("Hello World! por Sergio");
     }
 }
