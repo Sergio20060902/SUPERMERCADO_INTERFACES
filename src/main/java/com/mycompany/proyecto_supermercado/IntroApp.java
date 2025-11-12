@@ -263,7 +263,7 @@ public class IntroApp extends javax.swing.JFrame {
                 JOptionPane.ERROR_MESSAGE
             );
         }
-    }
+    
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -335,3 +335,4 @@ public class IntroApp extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 
+}
