@@ -1,7 +1,11 @@
 package com.mycompany.proyecto_supermercado;
 
 
+import java.awt.Color;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -105,9 +109,18 @@ public class IntroApp extends javax.swing.JFrame {
         jLabel12.setForeground(new java.awt.Color(51, 51, 255));
         jLabel12.setText("* Password:");
 
+        fieldemail.setBackground(new java.awt.Color(255, 255, 255));
+        fieldemail.setForeground(new java.awt.Color(255, 255, 255));
+        fieldemail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldemailActionPerformed(evt);
+            }
+        });
+
         jLabel10.setForeground(new java.awt.Color(51, 51, 255));
         jLabel10.setText("* Email Address:");
 
+        fieldcontra.setBackground(new java.awt.Color(255, 255, 255));
         fieldcontra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldcontraActionPerformed(evt);
@@ -278,6 +291,36 @@ public class IntroApp extends javax.swing.JFrame {
     private void fieldcontraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldcontraActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldcontraActionPerformed
+
+    private void fieldemailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldemailActionPerformed
+       fieldemail = new JTextField("Email", 20);
+        fieldemail.setForeground(Color.GRAY);
+
+        // Agregar el comportamiento del placeholder
+        fieldemail.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                if (fieldemail.getText().equals("Email")) {
+                    fieldemail.setText("");
+                    fieldemail.setForeground(Color.BLACK);
+                }
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                if (fieldemail.getText().isEmpty()) {
+                    fieldemail.setForeground(Color.GRAY);
+                    fieldemail.setText("Email");
+                }
+            }
+        });
+
+        // Agregar el campo al JFrame
+        add(fieldemail);
+
+        // Hacer visible la ventana
+        setVisible(true);
+    }//GEN-LAST:event_fieldemailActionPerformed
 
     /**
      * @param args the command line arguments
