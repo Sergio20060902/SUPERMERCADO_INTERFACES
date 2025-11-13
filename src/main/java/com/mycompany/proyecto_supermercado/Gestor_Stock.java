@@ -251,19 +251,23 @@ public class Gestor_Stock extends javax.swing.JFrame {
     }//GEN-LAST:event_MouseClicked2
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        Ventana_lacteos vl = new Ventana_lacteos();
+        vl.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        Ventana_pescados vp = new Ventana_pescados();
+        vp.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        Ventanas_bebidas vb = new Ventanas_bebidas();
+        vb.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        Ventana_carnes vc = new Ventana_carnes();
+        vc.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
     
     /**
