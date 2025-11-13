@@ -6,6 +6,9 @@ package com.mycompany.proyecto_supermercado;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import javax.swing.Timer;
 
 /**
@@ -19,14 +22,7 @@ public class Puntos_clientes extends javax.swing.JFrame {
      */
     public Puntos_clientes() {
         initComponents();
-        Timer timer = new Timer(1000, new ActionListener() {
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        actualizarFechaHora();
-    }
-});
-timer.start(); // Inicia el temporizador
-actualizarFechaHora(); // Muestra la hora inmediatamente
+        //Timer timer = new Timer(1000, new ActionListener() {
     }
 
     /**
@@ -52,6 +48,8 @@ actualizarFechaHora(); // Muestra la hora inmediatamente
         jLabel5 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        horaActual();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -141,30 +139,38 @@ actualizarFechaHora(); // Muestra la hora inmediatamente
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(47, 47, 47))
         );
 
         jPanel4.setBackground(new java.awt.Color(0, 153, 153));
 
-        jLabel6.setText("jLabel6");
+        jLabel6.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLabel6.setText("12/11/2025");
+        jLabel6.setText(fechaActual());
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(185, 185, 185)
+                .addGap(50, 50, 50)
                 .addComponent(jLabel6)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addGap(109, 109, 109))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addComponent(jLabel6)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addGap(58, 58, 58)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -198,7 +204,22 @@ actualizarFechaHora(); // Muestra la hora inmediatamente
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    public String fechaActual(){
+        LocalDate hoy = LocalDate.now();
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String fechaFormateada = hoy.format(formato);
+        return fechaFormateada;
+        
+        
+    }
+    public void horaActual(){
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("HH:mm:ss");
+        Timer tiempo = new Timer (1000, e -> {
+            LocalTime hora = LocalTime.now();
+            jLabel7.setText(hora.format(formato));
+        });
+        tiempo.start();
+    }
     /**
      * @param args the command line arguments
      */
@@ -243,6 +264,7 @@ actualizarFechaHora(); // Muestra la hora inmediatamente
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
