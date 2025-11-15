@@ -52,7 +52,7 @@ public class Gestor_Stock extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel2.setBackground(new java.awt.Color(51, 153, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         jLabel1.setText("CATÁLOGO");
@@ -74,7 +74,7 @@ public class Gestor_Stock extends javax.swing.JFrame {
                 .addContainerGap(48, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel3.setBackground(new java.awt.Color(0, 153, 255));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setText("Actualmente disponemos de la sección que se pueden seleccionar en pantalla. Pueden quedar productos fuera de stock.");
@@ -98,7 +98,6 @@ public class Gestor_Stock extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(255, 153, 153));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/publicidadsupermercado.jpg"))); // NOI18N
         jLabel4.setText("jLabel4");
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -121,7 +120,6 @@ public class Gestor_Stock extends javax.swing.JFrame {
 
         jPanel5.setBackground(new java.awt.Color(255, 153, 153));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/publicidasuper.jpg"))); // NOI18N
         jLabel5.setText("jLabel4");
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
