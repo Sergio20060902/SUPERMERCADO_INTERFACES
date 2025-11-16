@@ -98,6 +98,7 @@ public class Gestor_Stock extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(255, 153, 153));
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/publicidadsupermercado.jpg"))); // NOI18N
         jLabel4.setText("jLabel4");
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -120,6 +121,7 @@ public class Gestor_Stock extends javax.swing.JFrame {
 
         jPanel5.setBackground(new java.awt.Color(255, 153, 153));
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/publicidasuper.jpg"))); // NOI18N
         jLabel5.setText("jLabel4");
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -145,7 +147,9 @@ public class Gestor_Stock extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(255, 102, 102));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/leche(2).png"))); // NOI18N
         jButton1.setText("LÁCTEOS");
+        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -155,6 +159,7 @@ public class Gestor_Stock extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(255, 102, 102));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pescado.png"))); // NOI18N
         jButton2.setText("PESCADOS");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,6 +170,7 @@ public class Gestor_Stock extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(255, 102, 102));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/refresco.png"))); // NOI18N
         jButton3.setText("BEBIDAS");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -175,6 +181,7 @@ public class Gestor_Stock extends javax.swing.JFrame {
 
         jButton4.setBackground(new java.awt.Color(255, 102, 102));
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carne-picada.png"))); // NOI18N
         jButton4.setText("CARNES");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
