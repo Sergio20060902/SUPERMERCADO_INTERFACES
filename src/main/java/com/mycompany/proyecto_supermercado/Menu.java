@@ -52,7 +52,7 @@ public class Menu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(25, 1, 30, 1), javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5), "MENU HYPERMAC", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18), new java.awt.Color(0, 0, 0)))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(25, 1, 30, 1), javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5), "MENU HYPERMAC", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18)))); // NOI18N
 
         productos.setBackground(new java.awt.Color(153, 153, 153));
         productos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 2, true));
@@ -113,7 +113,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true));
         jPanel3.setLayout(new java.awt.GridLayout(1, 1, 5, 0));
 
-        B1.setText("Productos");
+        B1.setText("Catálogo");
         B1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 B1ActionPerformed(evt);
@@ -157,14 +157,12 @@ public class Menu extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/usuario.png"))); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Usuario");
 
         jButton2.setBackground(new java.awt.Color(204, 204, 204));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cestaaaaas.png"))); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("20 €");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -233,20 +231,27 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_B3ActionPerformed
 
     private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
-        // TODO add your handling code here:
+        Menu_empleados me = new Menu_empleados();
+        me.setVisible(true);
+        dispose();
     }//GEN-LAST:event_B2ActionPerformed
 
     private void B4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B4ActionPerformed
-        
+        Puntos_clientes pc = new Puntos_clientes();
+        pc.setVisible(true);
+        dispose();
     }//GEN-LAST:event_B4ActionPerformed
 
     private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
-
+      Gestor_Stock gs = new Gestor_Stock();
+      gs.setVisible(true);
+      dispose();
     }//GEN-LAST:event_B1ActionPerformed
 
     private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
        Ofertas empleado = new Ofertas();
         empleado.setVisible(true);
+        
     }//GEN-LAST:event_b5ActionPerformed
 
     /**
