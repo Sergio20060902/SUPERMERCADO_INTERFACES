@@ -22,6 +22,7 @@ public class Puntos_clientes extends javax.swing.JFrame {
      */
     public Puntos_clientes() {
         initComponents();
+        setLocationRelativeTo(null);
         //Timer timer = new Timer(1000, new ActionListener() {
     }
 
@@ -54,6 +55,7 @@ public class Puntos_clientes extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(51, 153, 255));
 
