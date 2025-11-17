@@ -56,6 +56,7 @@ public class Gestor_Stock extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(51, 153, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("CATÁLOGO");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/flecha-izquierda.png"))); // NOI18N
@@ -92,6 +93,7 @@ public class Gestor_Stock extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(0, 153, 255));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Actualmente disponemos de la sección que se pueden seleccionar en pantalla. Pueden quedar productos fuera de stock.");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
