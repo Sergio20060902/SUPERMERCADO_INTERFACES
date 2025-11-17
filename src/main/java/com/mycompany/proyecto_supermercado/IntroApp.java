@@ -110,7 +110,7 @@ public class IntroApp extends javax.swing.JFrame {
         jLabel12.setText("* Password:");
 
         fieldemail.setBackground(new java.awt.Color(255, 255, 255));
-        fieldemail.setForeground(new java.awt.Color(255, 255, 255));
+        fieldemail.setForeground(new java.awt.Color(0, 0, 0));
         fieldemail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldemailActionPerformed(evt);
@@ -121,6 +121,7 @@ public class IntroApp extends javax.swing.JFrame {
         jLabel10.setText("* Email Address:");
 
         fieldcontra.setBackground(new java.awt.Color(255, 255, 255));
+        fieldcontra.setForeground(new java.awt.Color(0, 0, 0));
         fieldcontra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldcontraActionPerformed(evt);
@@ -174,9 +175,9 @@ public class IntroApp extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
+                        .addGap(74, 74, 74)
                         .addComponent(jLabel7)
-                        .addGap(87, 87, 87)
+                        .addGap(96, 96, 96)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jLabel2)
@@ -196,13 +197,13 @@ public class IntroApp extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(270, 270, 270)
                         .addComponent(jLabel1)))
-                .addGap(65, 308, Short.MAX_VALUE))
+                .addGap(65, 229, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(367, 367, 367))
+                .addGap(290, 290, 290))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,13 +227,13 @@ public class IntroApp extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
+                        .addGap(17, 17, 17)
                         .addComponent(jLabel7)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addGap(29, 29, 29)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31))
+                .addGap(35, 35, 35))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -255,23 +256,22 @@ public class IntroApp extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
        String email = fieldemail.getText();
         String contrasena = String.valueOf(fieldcontra.getPassword());
-        if (email.equals("apf0023@alu.medac.es") && contrasena.equals("12345")) {
-           
-        } 
-        else if (email.equals("admin")&& contrasena.equals("12345")) {
-           
+        
+       if (email.equals("admin")&& contrasena.equals("12345")) {
+           Menu menu=new Menu();
+           menu.setVisible(true);
         }
         else if (email.isBlank() || contrasena.isBlank()) {
             JOptionPane.showMessageDialog(
                 this,
-                "Por favor, introduce una terroríficas credenciales para acceder a la app.",
+                "Por favor introduzca las credenciales.",
                 "Credenciales vacías",
                 JOptionPane.WARNING_MESSAGE
             );
         } else {
             JOptionPane.showMessageDialog(
                 this,
-                "El terrorífico usuario no existe o la terrorífica contraseña no existe.",
+                "Error, la contraseña o el usuario son incorrectos.",
                 "Credenciales incorrectas",
                 JOptionPane.ERROR_MESSAGE
             );
