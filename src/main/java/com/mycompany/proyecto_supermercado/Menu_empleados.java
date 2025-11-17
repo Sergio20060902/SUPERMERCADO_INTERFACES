@@ -76,6 +76,7 @@ public class Menu_empleados extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(51, 153, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("MENÚ EMPLEADOS");
 
         jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -125,6 +126,7 @@ public class Menu_empleados extends javax.swing.JFrame {
 
         jButton5.setBackground(new java.awt.Color(153, 255, 153));
         jButton5.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(0, 0, 0));
         jButton5.setText("MOSTRAR CLIENTES");
 
         jPanel6.setBackground(new java.awt.Color(204, 255, 255));
@@ -145,6 +147,7 @@ public class Menu_empleados extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(153, 255, 153));
         jButton1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("SELECCIONAR");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -202,6 +205,7 @@ public class Menu_empleados extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(153, 255, 153));
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("SELECCIONAR");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -259,6 +263,7 @@ public class Menu_empleados extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(153, 255, 153));
         jButton3.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("SELECCIONAR");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
@@ -399,6 +404,7 @@ public class Menu_empleados extends javax.swing.JFrame {
 
         jButton7.setBackground(new java.awt.Color(153, 255, 153));
         jButton7.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(0, 0, 0));
         jButton7.setText("REALIZAR FACTURA");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);

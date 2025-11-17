@@ -45,6 +45,7 @@ public class Ventana_lacteos extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 204));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("LÁCTEOS");
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/flecha-izquierda.png"))); // NOI18N
@@ -140,6 +141,7 @@ public class Ventana_lacteos extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(255, 255, 204));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("El stock de lácteos puede variar según días y semanas");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
