@@ -34,6 +34,7 @@ public class IntroApp extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -56,10 +57,18 @@ public class IntroApp extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setLayout(new java.awt.GridBagLayout());
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 204));
         jLabel1.setText("¡BIENVENIDO A HYPERMAC!");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(47, 68, 0, 229);
+        jPanel1.add(jLabel1, gridBagConstraints);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/google 2.png"))); // NOI18N
         jButton1.setText("Inicie sesión con Google");
@@ -68,22 +77,65 @@ public class IntroApp extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.ipady = 14;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(36, 188, 0, 0);
+        jPanel1.add(jButton1, gridBagConstraints);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 51, 255));
         jLabel2.setText("Una plataforma web donde los usuarios pueden:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(40, 96, 0, 0);
+        jPanel1.add(jLabel2, gridBagConstraints);
 
         jLabel3.setForeground(new java.awt.Color(51, 51, 255));
         jLabel3.setText("-.Hacer la compra online de forma rápida y sencilla. ");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(28, 150, 0, 0);
+        jPanel1.add(jLabel3, gridBagConstraints);
 
         jLabel4.setForeground(new java.awt.Color(51, 51, 255));
         jLabel4.setText("-Buscar productos con filtros inteligentes.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(12, 156, 0, 0);
+        jPanel1.add(jLabel4, gridBagConstraints);
 
         jLabel5.setForeground(new java.awt.Color(51, 51, 255));
         jLabel5.setText("-Recibir recomendaciones personalizadas.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(12, 156, 0, 0);
+        jPanel1.add(jLabel5, gridBagConstraints);
 
         jLabel6.setForeground(new java.awt.Color(51, 51, 255));
         jLabel6.setText("-Ver ofertas en tiempo real y gestionar pedidos.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(12, 156, 0, 0);
+        jPanel1.add(jLabel6, gridBagConstraints);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/face.png"))); // NOI18N
         jButton2.setText("Inicie sesión con Facebook");
@@ -92,9 +144,25 @@ public class IntroApp extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.ipadx = 25;
+        gridBagConstraints.ipady = 11;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(29, 188, 35, 0);
+        jPanel1.add(jButton2, gridBagConstraints);
 
         jLabel7.setForeground(new java.awt.Color(0, 153, 0));
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/compra.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridheight = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(17, 74, 0, 0);
+        jPanel1.add(jLabel7, gridBagConstraints);
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setBorder(javax.swing.BorderFactory.createCompoundBorder(null, javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102), 4), "REGISTRARSE", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18), new java.awt.Color(51, 0, 255)))); // NOI18N
@@ -165,76 +233,25 @@ public class IntroApp extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.ipadx = 34;
+        gridBagConstraints.ipady = 23;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(7, 142, 0, 0);
+        jPanel1.add(jPanel2, gridBagConstraints);
+
         jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("______________________________Or________________________________");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(jLabel7)
-                        .addGap(96, 96, 96)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel2)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel14)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(54, 54, 54)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel5)
-                                            .addComponent(jLabel4)
-                                            .addComponent(jLabel6)))))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(270, 270, 270)
-                        .addComponent(jLabel1)))
-                .addGap(65, 229, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(290, 290, 290))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(jLabel1)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(90, 90, 90)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel4)
-                        .addGap(12, 12, 12)
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel6)
-                        .addGap(24, 24, 24)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel14))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jLabel2)
-                        .addGap(17, 17, 17)
-                        .addComponent(jLabel7)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
-        );
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 142, 0, 0);
+        jPanel1.add(jLabel14, gridBagConstraints);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

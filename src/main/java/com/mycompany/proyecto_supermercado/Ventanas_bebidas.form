@@ -126,6 +126,7 @@
                         <LineBorder thickness="3"/>
                       </Border>
                       <Font PropertyName="font" name="Segoe UI" size="14" style="1"/>
+                      <Color PropertyName="color" blue="0" green="0" red="0" type="rgb"/>
                     </TitledBorder>
                   </Border>
                 </CompoundBorder>
