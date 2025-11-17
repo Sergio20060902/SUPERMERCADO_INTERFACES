@@ -429,7 +429,9 @@ public class Ofertas extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        if (evt.getSource() == jButton5) {
+                    JOptionPane.showMessageDialog(null, "Has añadido al carrito este producto","Aviso",JOptionPane.WARNING_MESSAGE);
+                }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -439,7 +441,9 @@ public class Ofertas extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        if (evt.getSource() == jButton3) {
+                    JOptionPane.showMessageDialog(null, "Has añadido al carrito este producto","Aviso",JOptionPane.WARNING_MESSAGE);
+                }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -451,7 +455,9 @@ public class Ofertas extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        if (evt.getSource() == jButton1) {
+                    JOptionPane.showMessageDialog(null, "Has añadido al carrito este producto","Aviso",JOptionPane.WARNING_MESSAGE);
+                }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void BotonAtras(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonAtras
