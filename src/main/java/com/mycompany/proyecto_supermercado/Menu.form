@@ -275,14 +275,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B2ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="B3">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Gestor Estado"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B3ActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JButton" name="b5">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ofertas"/>

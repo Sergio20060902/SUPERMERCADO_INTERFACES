@@ -65,7 +65,6 @@ public class Menu extends javax.swing.JFrame {
         B1 = new javax.swing.JButton();
         B4 = new javax.swing.JButton();
         B2 = new javax.swing.JButton();
-        B3 = new javax.swing.JButton();
         b5 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -77,7 +76,7 @@ public class Menu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(25, 1, 30, 1), javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5), "MENÚ HYPERMAC", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18), new java.awt.Color(0, 0, 0)))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(25, 1, 30, 1), javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5), "MENÚ HYPERMAC", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18)))); // NOI18N
 
         productos.setBackground(new java.awt.Color(153, 153, 153));
         productos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 2, true));
@@ -162,14 +161,6 @@ public class Menu extends javax.swing.JFrame {
         });
         jPanel3.add(B2);
 
-        B3.setText("Gestor Estado");
-        B3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B3ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(B3);
-
         b5.setText("Ofertas");
         b5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,22 +173,18 @@ public class Menu extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/usuario.png"))); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Usuario");
 
         jButton2.setBackground(new java.awt.Color(204, 204, 204));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cestaaaaas.png"))); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("20 €");
 
         lbfecha.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lbfecha.setForeground(new java.awt.Color(0, 0, 0));
         lbfecha.setText("Fecha");
 
         lbhora.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lbhora.setForeground(new java.awt.Color(0, 0, 0));
         lbhora.setText("Hora");
         lbhora.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentHidden(java.awt.event.ComponentEvent evt) {
@@ -273,10 +260,6 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B3ActionPerformed
-        
-    }//GEN-LAST:event_B3ActionPerformed
-
     private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
         Menu_empleados me = new Menu_empleados();
         me.setVisible(true);
@@ -344,7 +327,6 @@ public class Menu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton B1;
     private javax.swing.JButton B2;
-    private javax.swing.JButton B3;
     private javax.swing.JButton B4;
     private javax.swing.JButton b5;
     private javax.swing.JButton jButton2;
