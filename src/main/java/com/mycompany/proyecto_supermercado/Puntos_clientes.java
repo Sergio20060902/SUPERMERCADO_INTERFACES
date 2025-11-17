@@ -115,8 +115,9 @@ public class Puntos_clientes extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(102, 0, 0));
         jLabel4.setText("Puntos totales:");
 
-        jButton1.setBackground(new java.awt.Color(204, 255, 204));
+        jButton1.setBackground(new java.awt.Color(153, 255, 153));
         jButton1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("VALIDAR");
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dolar.png"))); // NOI18N
@@ -177,7 +178,6 @@ public class Puntos_clientes extends javax.swing.JFrame {
         jLabel6.setText(fechaActual());
 
         jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel7.setText("SDSD");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
