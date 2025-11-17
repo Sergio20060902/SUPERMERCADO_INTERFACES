@@ -304,6 +304,11 @@ public class Menu_empleados extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(153, 255, 153));
         jButton4.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jButton4.setText("VER GESTIÓN STOCK");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Para consultar la gestión acerca de los clientes, pulse aquí:");
@@ -311,6 +316,11 @@ public class Menu_empleados extends javax.swing.JFrame {
         jButton6.setBackground(new java.awt.Color(153, 255, 153));
         jButton6.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jButton6.setText("VER CLIENTES");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -478,8 +488,19 @@ public class Menu_empleados extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonAtras
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        BuscadorCliente bc = new BuscadorCliente();
+        bc.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        Gestion_Tablas gt = new Gestion_Tablas();
+        gt.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        Gestion_clientes gc = new Gestion_clientes();
+        gc.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
