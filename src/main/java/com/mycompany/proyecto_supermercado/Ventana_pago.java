@@ -49,6 +49,7 @@ public class Ventana_pago extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 153, 153));
 
         jPanel2.setBackground(new java.awt.Color(51, 153, 255));
         jPanel2.setLayout(new java.awt.GridBagLayout());
@@ -90,7 +91,6 @@ public class Ventana_pago extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("DINERO");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 0;
@@ -131,7 +131,7 @@ public class Ventana_pago extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.ipady = 35;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(47, 248, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(47, 263, 0, 2);
         jPanel3.add(jButton1, gridBagConstraints);
 
         jButton2.setBackground(new java.awt.Color(0, 153, 153));
@@ -146,7 +146,7 @@ public class Ventana_pago extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 324;
         gridBagConstraints.ipady = -2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(37, 248, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(37, 262, 0, 0);
         jPanel3.add(jButton2, gridBagConstraints);
 
         jButton3.setBackground(new java.awt.Color(0, 153, 153));
@@ -161,7 +161,7 @@ public class Ventana_pago extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 315;
         gridBagConstraints.ipady = -4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(40, 248, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(40, 263, 0, 0);
         jPanel3.add(jButton3, gridBagConstraints);
 
         jButton4.setBackground(new java.awt.Color(153, 255, 153));
@@ -173,7 +173,7 @@ public class Ventana_pago extends javax.swing.JFrame {
         gridBagConstraints.gridy = 4;
         gridBagConstraints.ipady = 13;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 104, 23, 39);
+        gridBagConstraints.insets = new java.awt.Insets(18, 63, 23, 21);
         jPanel3.add(jButton4, gridBagConstraints);
 
         jLabel3.setForeground(new java.awt.Color(51, 51, 51));
@@ -191,7 +191,7 @@ public class Ventana_pago extends javax.swing.JFrame {
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 18, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 53, 0, 0);
         jPanel3.add(jLabel4, gridBagConstraints);
 
         jPanel5.setBackground(new java.awt.Color(0, 153, 255));
@@ -212,8 +212,8 @@ public class Ventana_pago extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
