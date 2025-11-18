@@ -36,7 +36,7 @@ public class PanelPago extends javax.swing.JPanel {
         jPasswordField1 = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        dinero = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
@@ -138,6 +138,12 @@ public class PanelPago extends javax.swing.JPanel {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(111, 39, 0, 0);
         jPanel1.add(jLabel4, gridBagConstraints);
+
+        dinero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dineroActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
@@ -146,7 +152,7 @@ public class PanelPago extends javax.swing.JPanel {
         gridBagConstraints.ipadx = 170;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(108, 18, 0, 85);
-        jPanel1.add(jTextField3, gridBagConstraints);
+        jPanel1.add(dinero, gridBagConstraints);
 
         jLabel5.setForeground(new java.awt.Color(102, 102, 102));
         jLabel5.setText("Condiciones.");
@@ -176,15 +182,20 @@ public class PanelPago extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
       
         
-        System.out.println("El cliente "+ tfnombre.getText() +"ha sido agregado correctamente");
+        System.out.println("El cliente "+ tfnombre.getText() +"ha añadido" + dinero.getText());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void tfnombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfnombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfnombreActionPerformed
 
+    private void dineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dineroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dineroActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField dinero;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -194,7 +205,6 @@ public class PanelPago extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField tfnombre;
     // End of variables declaration//GEN-END:variables
 }
