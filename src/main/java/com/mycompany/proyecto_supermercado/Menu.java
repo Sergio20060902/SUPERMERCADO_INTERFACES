@@ -216,21 +216,23 @@ public class Menu extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridheight = 3;
+        gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(41, 647, 0, 6);
+        gridBagConstraints.insets = new java.awt.Insets(34, 585, 0, 0);
         jPanel1.add(jButton2, gridBagConstraints);
 
         lbfecha.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lbfecha.setForeground(new java.awt.Color(0, 0, 0));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(118, 92, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(62, 92, 0, 0);
         jPanel1.add(lbfecha, gridBagConstraints);
 
         lbhora.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lbhora.setForeground(new java.awt.Color(0, 0, 0));
         lbhora.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentHidden(java.awt.event.ComponentEvent evt) {
                 lbhoraComponentHidden(evt);
@@ -241,7 +243,7 @@ public class Menu extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(118, 62, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(63, 62, 0, 0);
         jPanel1.add(lbhora, gridBagConstraints);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
