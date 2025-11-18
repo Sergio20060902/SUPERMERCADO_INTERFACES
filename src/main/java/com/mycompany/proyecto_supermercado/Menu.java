@@ -25,6 +25,7 @@ public class Menu extends javax.swing.JFrame {
         initComponents();
  horaActual();  
  lbfecha.setText(fechaActual());
+  
     }
     public void horaActual() {
     DateTimeFormatter formato = DateTimeFormatter.ofPattern("HH:mm:ss");
@@ -41,8 +42,6 @@ public class Menu extends javax.swing.JFrame {
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         String fechaFormateada = hoy.format(formato);
         return fechaFormateada;
-        
-        
     }
 
     /**
@@ -70,7 +69,6 @@ public class Menu extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
         lbfecha = new javax.swing.JLabel();
         lbhora = new javax.swing.JLabel();
 
@@ -194,7 +192,7 @@ public class Menu extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(84, 58, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(46, 58, 0, 0);
         jPanel1.add(jLabel3, gridBagConstraints);
 
         jLabel4.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
@@ -205,27 +203,23 @@ public class Menu extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(101, 24, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(62, 24, 0, 0);
         jPanel1.add(jLabel4, gridBagConstraints);
 
         jButton2.setBackground(new java.awt.Color(204, 204, 204));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cestaaaaas.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridheight = 3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(76, 647, 0, 6);
-        jPanel1.add(jButton2, gridBagConstraints);
-
-        jLabel8.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel8.setText("20 €");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridheight = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(89, 6, 0, 0);
-        jPanel1.add(jLabel8, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(41, 647, 0, 6);
+        jPanel1.add(jButton2, gridBagConstraints);
 
         lbfecha.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -257,7 +251,7 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -297,6 +291,12 @@ public class Menu extends javax.swing.JFrame {
     private void lbhoraComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_lbhoraComponentHidden
         // TODO add your handling code here:
     }//GEN-LAST:event_lbhoraComponentHidden
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+      Ventana_pago vp=new Ventana_pago();
+      vp.setVisible(true);
+      
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -347,7 +347,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel lbfecha;

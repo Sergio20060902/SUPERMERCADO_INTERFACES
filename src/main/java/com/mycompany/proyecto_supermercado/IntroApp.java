@@ -52,7 +52,6 @@ public class IntroApp extends javax.swing.JFrame {
         fieldemail = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         fieldcontra = new javax.swing.JPasswordField();
-        jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,7 +83,7 @@ public class IntroApp extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 38;
         gridBagConstraints.ipady = 14;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(36, 230, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(36, 233, 0, 6);
         jPanel1.add(jButton1, gridBagConstraints);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -151,7 +150,7 @@ public class IntroApp extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 25;
         gridBagConstraints.ipady = 11;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(29, 230, 35, 0);
+        gridBagConstraints.insets = new java.awt.Insets(29, 233, 35, 0);
         jPanel1.add(jButton2, gridBagConstraints);
 
         jLabel7.setForeground(new java.awt.Color(0, 153, 0));
@@ -161,7 +160,7 @@ public class IntroApp extends javax.swing.JFrame {
         gridBagConstraints.gridy = 2;
         gridBagConstraints.gridheight = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(10, 69, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(10, 43, 0, 3);
         jPanel1.add(jLabel7, gridBagConstraints);
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
@@ -242,27 +241,16 @@ public class IntroApp extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 54;
         gridBagConstraints.ipady = 46;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(14, 167, 0, 203);
+        gridBagConstraints.insets = new java.awt.Insets(14, 156, 0, 203);
         jPanel1.add(jPanel2, gridBagConstraints);
-
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel14.setText("______________________________Or________________________________");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 8;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 184, 0, 0);
-        jPanel1.add(jLabel14, gridBagConstraints);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -386,7 +374,6 @@ public class IntroApp extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
