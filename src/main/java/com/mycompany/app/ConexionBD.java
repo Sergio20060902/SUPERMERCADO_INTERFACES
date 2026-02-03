@@ -6,11 +6,11 @@ import java.sql.SQLException;
 
 public class ConexionBD {
     // Configuración de tu base de datos (cámbiala si es diferente)
-    private static final String URL = "jdbc:mysql://localhost:3306/hospital?useSSL=false&serverTimezone=UTC";
+    private static final String URL = "jdbc:mysql://localhost:3306/supermercado?useSSL=false&serverTimezone=UTC";
     private static final String USER = "root";
-    private static final String PASS = "123456"; // Pon aquí tu contraseña real de MySQL
+    private static final String PASS = "123456"; 
 
-    // Método que devuelve la conexión
+   
     public static Connection getConexion() {
         Connection con = null;
         try {
@@ -28,7 +28,7 @@ public class ConexionBD {
         return con;
     }
 
-    // ¡¡IMPORTANTE!! Añade este main para poder probar la conexión rápido
+    
     public static void main(String[] args) {
         Connection prueba = getConexion();
         if (prueba != null) {
