@@ -295,8 +295,9 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_lbhoraComponentHidden
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      Ventana_pago vp=new Ventana_pago();
+      Ventana_ticket vp=new Ventana_ticket();
       vp.setVisible(true);
+      
       
     }//GEN-LAST:event_jButton2ActionPerformed
 
