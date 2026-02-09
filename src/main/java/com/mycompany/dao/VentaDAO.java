@@ -52,8 +52,7 @@ public class VentaDAO {
                 try (PreparedStatement psDetalle = con.prepareStatement(sqlDetalle)) {
                     psDetalle.setInt(1, idVenta);
                     psDetalle.setInt(2, idProducto);
-                    psDetalle.setInt(3, cantidad);
-                    psDetalle.setInt(4, idProducto);
+                    psDetalle.setInt(3, cantidad);            
                     psDetalle.executeUpdate();
                 }
 

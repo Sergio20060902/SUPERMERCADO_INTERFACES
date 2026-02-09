@@ -78,18 +78,7 @@ public class ProductoDAO {
         }
     }
 
-    // 🔄 Actualizar solo stock
-    public void actualizarStock(int idProducto, int nuevoStock) throws SQLException {
-        String sql = "UPDATE productos SET stock = ? WHERE id = ?";
-
-        try (Connection con = ConexionBD.getConexion();
-             PreparedStatement ps = con.prepareStatement(sql)) {
-
-            ps.setInt(1, nuevoStock);
-            ps.setInt(2, idProducto);
-            ps.executeUpdate();
-        }
-    }
+ 
 
     // ❌ Eliminar producto
     public void eliminar(int id) throws SQLException {

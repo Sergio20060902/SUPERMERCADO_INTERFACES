@@ -241,10 +241,8 @@ public class Ventana_pago extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       PanelPago p1 = new PanelPago();
-    
-    
-    JFrame ventanaPago = new JFrame("Pago con targeta");
+      PanelPago p1 = new PanelPago();
+        JFrame ventanaPago = new JFrame("Pago con targeta");
     ventanaPago.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); 
     ventanaPago.setSize(730, 640);           
     ventanaPago.setLocationRelativeTo(null); 
