@@ -16,9 +16,11 @@ public class Ventana_lacteos extends javax.swing.JFrame {
      * Creates new form Ventana_lacteos
      */
     public Ventana_lacteos() {
+    
         initComponents();
-         setLocationRelativeTo(null);
-        
+        setLocationRelativeTo(null);
+        cargarDatosStock();
+
     }
 
     /**
@@ -35,13 +37,14 @@ public class Ventana_lacteos extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        lblStockYogur = new javax.swing.JLabel();
+        lblStockLeche = new javax.swing.JLabel();
+        lblStockQueso = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
 
@@ -60,6 +63,19 @@ public class Ventana_lacteos extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(204, 204, 204));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cestaaaaas.png"))); // NOI18N
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -69,18 +85,22 @@ public class Ventana_lacteos extends javax.swing.JFrame {
                 .addComponent(jLabel9)
                 .addGap(433, 433, 433)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(60, 60, 60))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel9))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(jLabel1)))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton2)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(32, 32, 32)
+                            .addComponent(jLabel9))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(47, 47, 47)
+                            .addComponent(jLabel1))))
                 .addContainerGap(52, Short.MAX_VALUE))
         );
 
@@ -88,22 +108,37 @@ public class Ventana_lacteos extends javax.swing.JFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(20, 20, 20, 20), javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3), "Lácteos disponibles", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14)))); // NOI18N
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/yogur-griego.png"))); // NOI18N
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/leche.png"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tarta-de-queso.png"))); // NOI18N
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(153, 255, 153));
-        jLabel5.setText("5 UNIDADES YOGUR GRIEGO DISPONIBLES");
+        lblStockYogur.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        lblStockYogur.setForeground(new java.awt.Color(153, 255, 153));
+        lblStockYogur.setText("5 UNIDADES YOGUR GRIEGO DISPONIBLES");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel6.setText("0 STOCK LECHE");
+        lblStockLeche.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        lblStockLeche.setForeground(new java.awt.Color(255, 51, 51));
+        lblStockLeche.setText("0 STOCK LECHE");
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 204));
-        jLabel7.setText("SIN EXISTENCIAS");
+        lblStockQueso.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        lblStockQueso.setForeground(new java.awt.Color(255, 255, 204));
+        lblStockQueso.setText("SIN EXISTENCIAS");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -116,7 +151,7 @@ public class Ventana_lacteos extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addGap(244, 244, 244))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
+                        .addComponent(lblStockYogur)
                         .addGap(144, 144, 144)))
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -125,9 +160,9 @@ public class Ventana_lacteos extends javax.swing.JFrame {
                         .addGap(238, 238, 238)
                         .addComponent(jLabel4))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
+                        .addComponent(lblStockLeche)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel7)))
+                        .addComponent(lblStockQueso)))
                 .addGap(99, 99, 99))
         );
         jPanel3Layout.setVerticalGroup(
@@ -140,9 +175,9 @@ public class Ventana_lacteos extends javax.swing.JFrame {
                     .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7))
+                    .addComponent(lblStockYogur)
+                    .addComponent(lblStockLeche)
+                    .addComponent(lblStockQueso))
                 .addContainerGap(130, Short.MAX_VALUE))
         );
 
@@ -191,10 +226,129 @@ public class Ventana_lacteos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonAtras(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonAtras
-          Gestor_Stock gs = new Gestor_Stock();
-          gs.setVisible(true);
-          dispose();
+        Gestor_Stock gs = new Gestor_Stock();
+        gs.setVisible(true);
+        dispose();
     }//GEN-LAST:event_BotonAtras
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+
+        // Producto: Leche Entera (ID 1)
+        com.mycompany.dao.ProductoDAO dao = new com.mycompany.dao.ProductoDAO();
+        com.mycompany.app.Carrito carrito = com.mycompany.app.Carrito.getInstancia();
+
+        try {
+            com.mycompany.app.Producto producto = dao.buscarPorId(1);
+
+            if (producto != null) {
+                if (carrito.getCantidadProducto(1) + 1 > producto.getStock()) {
+                    javax.swing.JOptionPane.showMessageDialog(this, "¡Stock agotado!", "Aviso", javax.swing.JOptionPane.WARNING_MESSAGE);
+                    return;
+                }
+
+                carrito.anadirProducto(producto, 1);
+                cargarDatosStock();
+                javax.swing.JOptionPane.showMessageDialog(this, "Añadido al carrito: " + producto.getNombre());
+            }
+        } catch (Exception e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Error de conexión", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // Producto: Yogur Natural (ID 2)
+        com.mycompany.dao.ProductoDAO dao = new com.mycompany.dao.ProductoDAO();
+        com.mycompany.app.Carrito carrito = com.mycompany.app.Carrito.getInstancia();
+
+        try {
+            com.mycompany.app.Producto producto = dao.buscarPorId(2);
+
+            if (producto != null) {
+                if (carrito.getCantidadProducto(2) + 1 > producto.getStock()) {
+                    javax.swing.JOptionPane.showMessageDialog(this, "¡Stock agotado!", "Aviso", javax.swing.JOptionPane.WARNING_MESSAGE);
+                    return;
+                }
+
+                carrito.anadirProducto(producto, 1);
+                cargarDatosStock();
+                javax.swing.JOptionPane.showMessageDialog(this, "Añadido al carrito: " + producto.getNombre());
+            }
+        } catch (Exception e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Error de conexión", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        // Producto: Queso Curado (ID 3)
+com.mycompany.dao.ProductoDAO dao = new com.mycompany.dao.ProductoDAO();
+com.mycompany.app.Carrito carrito = com.mycompany.app.Carrito.getInstancia();
+
+try {
+    com.mycompany.app.Producto producto = dao.buscarPorId(3);
+    
+    if (producto != null) {
+        if (carrito.getCantidadProducto(3) + 1 > producto.getStock()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "¡Stock agotado!", "Aviso", javax.swing.JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        carrito.anadirProducto(producto, 1);
+        cargarDatosStock();
+        javax.swing.JOptionPane.showMessageDialog(this, "Añadido al carrito: " + producto.getNombre());
+    }
+} catch (Exception e) {
+    javax.swing.JOptionPane.showMessageDialog(this, "Error de conexión", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+}
+    }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+       com.mycompany.app.Carrito carrito = com.mycompany.app.Carrito.getInstancia();
+
+        if (carrito.getListaElementos().isEmpty()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "La cesta está vacía. ¡Añade productos primero!");
+        } else {
+            //Construimos el texto del ticket
+            StringBuilder mensaje = new StringBuilder();
+            mensaje.append("=== TU COMPRA ACTUAL ===\n\n");
+
+            for (com.mycompany.app.Carrito.ElementoCarrito item : carrito.getListaElementos()) {
+                mensaje.append("• ").append(item.getProducto().getNombre())
+                        .append("  (x").append(item.getCantidad()).append(")")
+                        .append("  ->  ").append(String.format("%.2f", item.getImporteTotal())).append("€\n");
+            }
+
+            mensaje.append("\n========================\n");
+            mensaje.append("TOTAL: ").append(String.format("%.2f", carrito.calcularTotal())).append("€");
+
+            //Definimos los botones que queremos que salgan
+            Object[] botones = {"Ir a Pagar", "Seguir Comprando"};
+
+            //Mostramos la ventana con opciones
+            int opcionElegida = javax.swing.JOptionPane.showOptionDialog(
+                    this,
+                    mensaje.toString(),
+                    "Revisar Cesta",
+                    javax.swing.JOptionPane.YES_NO_OPTION,
+                    javax.swing.JOptionPane.QUESTION_MESSAGE,
+                    null,
+                    botones,
+                    botones[1] // Botón seleccionado por defecto
+            );
+
+            //Actuamos según lo que haya pulsado
+            if (opcionElegida == 0) {
+         
+                new Ventana_pago().setVisible(true);
+                this.dispose();
+            }
+            
+        }
+    }//GEN-LAST:event_jButton2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -229,21 +383,75 @@ public class Ventana_lacteos extends javax.swing.JFrame {
                 new Ventana_lacteos().setVisible(true);
             }
         });
+
     }
 
+    private void cargarDatosStock() {
+    com.mycompany.dao.ProductoDAO dao = new com.mycompany.dao.ProductoDAO();
+    com.mycompany.app.Carrito carrito = com.mycompany.app.Carrito.getInstancia();
+    
+    try {
+        // --- PRODUCTO ID 1: LECHE ---
+        com.mycompany.app.Producto p1 = dao.buscarPorId(1);
+        if (p1 != null) {
+            int stockReal = p1.getStock() - carrito.getCantidadProducto(1);
+            lblStockLeche.setText(p1.getNombre() + " - Stock: " + stockReal);
+            
+            if (stockReal <= 0) {
+                lblStockLeche.setText("AGOTADO");
+                lblStockLeche.setForeground(java.awt.Color.RED);
+            } else {
+                lblStockLeche.setForeground(java.awt.Color.BLACK);
+            }
+        }
+
+        // --- PRODUCTO ID 2: YOGUR ---
+        com.mycompany.app.Producto p2 = dao.buscarPorId(2);
+        if (p2 != null) {
+            int stockReal = p2.getStock() - carrito.getCantidadProducto(2);
+            lblStockYogur.setText(p2.getNombre() + " - Stock: " + stockReal);
+            
+            if (stockReal <= 0) {
+                lblStockYogur.setText("AGOTADO");
+                lblStockYogur.setForeground(java.awt.Color.RED);
+            } else {
+                lblStockYogur.setForeground(java.awt.Color.BLACK);
+            }
+        }
+
+        // --- PRODUCTO ID 3: QUESO ---
+        com.mycompany.app.Producto p3 = dao.buscarPorId(3);
+        if (p3 != null) {
+            int stockReal = p3.getStock() - carrito.getCantidadProducto(3);
+            lblStockQueso.setText(p3.getNombre() + " - Stock: " + stockReal);
+            
+            if (stockReal <= 0) {
+                lblStockQueso.setText("AGOTADO");
+                lblStockQueso.setForeground(java.awt.Color.RED);
+            } else {
+                lblStockQueso.setForeground(java.awt.Color.BLACK);
+            }
+        }
+        
+    } catch (Exception e) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Error al cargar los stocks: " + e.getMessage());
+    }
+}
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel lblStockLeche;
+    private javax.swing.JLabel lblStockQueso;
+    private javax.swing.JLabel lblStockYogur;
     // End of variables declaration//GEN-END:variables
 }

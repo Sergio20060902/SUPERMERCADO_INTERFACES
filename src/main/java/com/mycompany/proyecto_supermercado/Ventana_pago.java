@@ -254,13 +254,71 @@ public class Ventana_pago extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void BotonAtras(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonAtras
-        Menu mn = new Menu();
-        mn.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_BotonAtras
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        
+        com.mycompany.app.Carrito carrito = com.mycompany.app.Carrito.getInstancia();
+    com.mycompany.dao.ProductoDAO dao = new com.mycompany.dao.ProductoDAO();
+    
+    //SI ESTA VACIO NO HACEMOS NADA
+    if (carrito.getListaElementos().isEmpty()) {
+        javax.swing.JOptionPane.showMessageDialog(this, "El carrito está vacío");
+        return;
+    }
+
+    try {
+        //ACTUALIZAMOS BD ITERANDO PRODUCTO POR PRODUCTO
+        for (com.mycompany.app.Carrito.ElementoCarrito item : carrito.getListaElementos()) {
+            
+            
+            com.mycompany.app.Producto prodBD = dao.buscarPorId(item.getProducto().getId());
+            
+            if (prodBD != null) {
+                int nuevoStock = prodBD.getStock() - item.getCantidad();
+                
+                if (nuevoStock < 0) nuevoStock = 0;
+
+                dao.actualizarStock(prodBD.getId(), nuevoStock);
+            }
+        }
+
+        // VACIAMOS EL CARRITO
+        carrito.vaciarCarrito(); // Asegúrate de tener este método o usa carrito.getListaElementos().clear();
+
+        // QUE DESEA HACER EL USER
+        Object[] opciones = {"Volver al Menú", "Cerrar App"};
+        
+        int respuesta = javax.swing.JOptionPane.showOptionDialog(
+            this,
+            "¡Compra realizada con éxito!\nLa base de datos ha sido actualizada.",
+            "Finalizar Compra",
+            javax.swing.JOptionPane.YES_NO_OPTION,
+            javax.swing.JOptionPane.QUESTION_MESSAGE,
+            null,
+            opciones,
+            opciones[0]
+        );
+
+        if (respuesta == 0) {
+            // VOLVER AL MENU
+            new Menu().setVisible(true);
+            this.dispose();
+        } else {
+            // CERRAR
+            System.exit(0);
+        }
+
+    } catch (java.sql.SQLException e) {
+        e.printStackTrace();
+        javax.swing.JOptionPane.showMessageDialog(this, "Error al actualizar la Base de Datos: " + e.getMessage());
+    }
+        
+        
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

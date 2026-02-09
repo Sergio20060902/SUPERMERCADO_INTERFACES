@@ -66,6 +66,7 @@ public class Menu extends javax.swing.JFrame {
         B4 = new javax.swing.JButton();
         B2 = new javax.swing.JButton();
         b5 = new javax.swing.JButton();
+        informebtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
@@ -174,6 +175,14 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         jPanel3.add(b5);
+
+        informebtn.setText("Informes");
+        informebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                informebtnActionPerformed(evt);
+            }
+        });
+        jPanel3.add(informebtn);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -301,6 +310,15 @@ public class Menu extends javax.swing.JFrame {
       
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void informebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_informebtnActionPerformed
+        // TODO add your handling code here:
+        Ventana_informes vi = new Ventana_informes();
+        vi.setLocationRelativeTo(null);
+        vi.setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_informebtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -342,6 +360,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton B2;
     private javax.swing.JButton B4;
     private javax.swing.JButton b5;
+    private javax.swing.JButton informebtn;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

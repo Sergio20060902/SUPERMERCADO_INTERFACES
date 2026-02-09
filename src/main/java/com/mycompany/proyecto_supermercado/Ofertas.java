@@ -17,6 +17,7 @@ public class Ofertas extends javax.swing.JFrame {
      */
     public Ofertas() {
         initComponents();
+        cargarDatosStock();
     }
 
     /**
@@ -39,6 +40,7 @@ public class Ofertas extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        lblStockJamon = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -48,6 +50,7 @@ public class Ofertas extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        lblStockPavo = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
@@ -57,8 +60,10 @@ public class Ofertas extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        lblStockHamburguesa = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -94,6 +99,11 @@ public class Ofertas extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 0, 0));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButton1.setText("Añadir");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -108,19 +118,12 @@ public class Ofertas extends javax.swing.JFrame {
             }
         });
 
+        lblStockJamon.setText("jLabel21");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel3))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jLabel4)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -140,6 +143,18 @@ public class Ofertas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(19, 19, 19))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(jLabel4))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addComponent(lblStockJamon)))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -163,7 +178,9 @@ public class Ofertas extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(131, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addComponent(lblStockJamon)
+                .addGap(56, 56, 56))
         );
 
         jPanel1.add(jPanel2);
@@ -208,14 +225,12 @@ public class Ofertas extends javax.swing.JFrame {
             }
         });
 
+        lblStockPavo.setText("jLabel21");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -240,6 +255,15 @@ public class Ofertas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton4)
                 .addGap(19, 19, 19))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel9))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addComponent(lblStockPavo)))
+                .addGap(29, 99, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -264,7 +288,9 @@ public class Ofertas extends javax.swing.JFrame {
                 .addComponent(jLabel12)
                 .addGap(18, 18, 18)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(131, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addComponent(lblStockPavo)
+                .addGap(55, 55, 55))
         );
 
         jPanel1.add(jPanel5);
@@ -309,6 +335,8 @@ public class Ofertas extends javax.swing.JFrame {
             }
         });
 
+        lblStockHamburguesa.setText("jLabel21");
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -341,6 +369,10 @@ public class Ofertas extends javax.swing.JFrame {
                         .addGap(80, 80, 80)
                         .addComponent(jLabel16)))
                 .addGap(71, 75, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(lblStockHamburguesa)
+                .addGap(135, 135, 135))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -365,7 +397,9 @@ public class Ofertas extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel18)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(131, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addComponent(lblStockHamburguesa)
+                .addGap(55, 55, 55))
         );
 
         jPanel1.add(jPanel6);
@@ -384,6 +418,14 @@ public class Ofertas extends javax.swing.JFrame {
             }
         });
 
+        jButton7.setBackground(new java.awt.Color(204, 204, 204));
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cestaaaaas.png"))); // NOI18N
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -393,6 +435,8 @@ public class Ofertas extends javax.swing.JFrame {
                 .addGap(42, 42, 42)
                 .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton7)
+                .addGap(77, 77, 77)
                 .addComponent(jLabel19)
                 .addGap(44, 44, 44))
         );
@@ -402,7 +446,8 @@ public class Ofertas extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel19))
+                    .addComponent(jLabel19)
+                    .addComponent(jButton7))
                 .addGap(4, 4, 4)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 738, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -425,48 +470,92 @@ public class Ofertas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-          if (evt.getSource() == jButton6) {
-                    JOptionPane.showMessageDialog(null, "Has añadido a favoritos este producto");
-                }
+        if (evt.getSource() == jButton6) {
+            JOptionPane.showMessageDialog(null, "Has añadido a favoritos este producto");
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        if (evt.getSource() == jButton5) {
-                    JOptionPane.showMessageDialog(null, "Has añadido al carrito este producto","Aviso",JOptionPane.WARNING_MESSAGE);
-                }
+        //HAMBURGUESA (ID 22)
+        com.mycompany.app.Carrito carrito = com.mycompany.app.Carrito.getInstancia();
+        com.mycompany.dao.ProductoDAO dao = new com.mycompany.dao.ProductoDAO();
+
+        try {
+            com.mycompany.app.Producto p = dao.buscarPorId(22);
+            if (p != null) {
+                carrito.anadirProducto(p, 1);
+                cargarDatosStock();
+                javax.swing.JOptionPane.showMessageDialog(this, "¡Producto añadido con éxito!");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-         if (evt.getSource() == jButton4) {
-                    JOptionPane.showMessageDialog(null, "Has añadido a favoritos este producto");
-                }
+        if (evt.getSource() == jButton4) {
+            JOptionPane.showMessageDialog(null, "Has añadido a favoritos este producto");
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        if (evt.getSource() == jButton3) {
-                    JOptionPane.showMessageDialog(null, "Has añadido al carrito este producto","Aviso",JOptionPane.WARNING_MESSAGE);
-                }
+        //PAVO (ID 21)
+        com.mycompany.app.Carrito carrito = com.mycompany.app.Carrito.getInstancia();
+        com.mycompany.dao.ProductoDAO dao = new com.mycompany.dao.ProductoDAO();
+
+        try {
+            com.mycompany.app.Producto p = dao.buscarPorId(21);
+            if (p != null) {
+                carrito.anadirProducto(p, 1);
+                cargarDatosStock();
+                javax.swing.JOptionPane.showMessageDialog(this, "¡Producto añadido con éxito!");
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-          if (evt.getSource() == jButton2) {
-                    JOptionPane.showMessageDialog(null, "Has añadido a favoritos este producto");
-                }
-        
-        
+        if (evt.getSource() == jButton2) {
+            JOptionPane.showMessageDialog(null, "Has añadido a favoritos este producto");
+        }
+
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (evt.getSource() == jButton1) {
-                    JOptionPane.showMessageDialog(null, "Has añadido al carrito este producto","Aviso",JOptionPane.WARNING_MESSAGE);
-                }
+        //JAMON (ID 20)
+        com.mycompany.app.Carrito carrito = com.mycompany.app.Carrito.getInstancia();
+        com.mycompany.dao.ProductoDAO dao = new com.mycompany.dao.ProductoDAO();
+
+        try {
+            com.mycompany.app.Producto p = dao.buscarPorId(20);
+            if (p != null) {
+                carrito.anadirProducto(p, 1);
+                cargarDatosStock();
+                javax.swing.JOptionPane.showMessageDialog(this, "¡Producto añadido con éxito!");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void BotonAtras(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonAtras
-        Menu mn = new Menu();
-        mn.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_BotonAtras
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        Ventana_ticket vp = new Ventana_ticket();
+        vp.setVisible(true);
+
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -504,6 +593,25 @@ public class Ofertas extends javax.swing.JFrame {
         });
     }
 
+    private void cargarDatosStock() {
+        com.mycompany.dao.ProductoDAO dao = new com.mycompany.dao.ProductoDAO();
+
+        // OFERTA 1: JAMÓN (ID 20)
+        int stockJamon = dao.getStockReal(20);
+        lblStockJamon.setText("Stock: " + stockJamon + " uds.");
+        lblStockJamon.setForeground(stockJamon <= 0 ? java.awt.Color.RED : java.awt.Color.BLACK);
+
+        //OFERTA 2: PAVO (ID 21)
+        int stockPavo = dao.getStockReal(21);
+        lblStockPavo.setText("Stock: " + stockPavo + " uds.");
+        lblStockPavo.setForeground(stockPavo <= 0 ? java.awt.Color.RED : java.awt.Color.BLACK);
+
+        //OFERTA 3: HAMBURGUESA (ID 22)
+        int stockBurger = dao.getStockReal(22);
+        lblStockHamburguesa.setText("Stock: " + stockBurger + " uds.");
+        lblStockHamburguesa.setForeground(stockBurger <= 0 ? java.awt.Color.RED : java.awt.Color.BLACK);
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -511,6 +619,7 @@ public class Ofertas extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -536,5 +645,8 @@ public class Ofertas extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JLabel lblStockHamburguesa;
+    private javax.swing.JLabel lblStockJamon;
+    private javax.swing.JLabel lblStockPavo;
     // End of variables declaration//GEN-END:variables
 }

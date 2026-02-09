@@ -16,6 +16,7 @@ public class Ventana_carnes extends javax.swing.JFrame {
     public Ventana_carnes() {
         initComponents();
         setLocationRelativeTo(null);
+        cargarDatosStock();
     }
 
     /**
@@ -32,13 +33,14 @@ public class Ventana_carnes extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        lblStockTernera = new javax.swing.JLabel();
+        lblStockPollo = new javax.swing.JLabel();
+        lblStockHamburguesa = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
 
@@ -57,6 +59,19 @@ public class Ventana_carnes extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(204, 204, 204));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cestaaaaas.png"))); // NOI18N
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -66,13 +81,16 @@ public class Ventana_carnes extends javax.swing.JFrame {
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(479, 479, 479))
+                .addGap(363, 363, 363)
+                .addComponent(jButton2)
+                .addGap(62, 62, 62))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton2)
                     .addComponent(jLabel9)
                     .addComponent(jLabel1))
                 .addContainerGap(53, Short.MAX_VALUE))
@@ -82,23 +100,38 @@ public class Ventana_carnes extends javax.swing.JFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(20, 20, 20, 20), javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3), "Carnes disponibles", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Black", 1, 14)))); // NOI18N
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carne(1).png"))); // NOI18N
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carne(2).png"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/chuleta.png"))); // NOI18N
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel5.setText("0 STOCK HAMBURGUESAS");
+        lblStockTernera.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblStockTernera.setForeground(new java.awt.Color(204, 0, 0));
+        lblStockTernera.setText("0 STOCK HAMBURGUESAS");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(102, 255, 102));
-        jLabel6.setText("20 KG FILETES DISPONIBLES");
+        lblStockPollo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblStockPollo.setForeground(new java.awt.Color(102, 255, 102));
+        lblStockPollo.setText("20 KG FILETES DISPONIBLES");
 
-        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(102, 255, 102));
-        jLabel7.setText("5 CHULETONES DISPONIBLES");
+        lblStockHamburguesa.setBackground(new java.awt.Color(0, 0, 0));
+        lblStockHamburguesa.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblStockHamburguesa.setForeground(new java.awt.Color(102, 255, 102));
+        lblStockHamburguesa.setText("5 CHULETONES DISPONIBLES");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -111,7 +144,7 @@ public class Ventana_carnes extends javax.swing.JFrame {
                         .addComponent(jLabel2))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(49, 49, 49)
-                        .addComponent(jLabel5)))
+                        .addComponent(lblStockTernera)))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -121,9 +154,9 @@ public class Ventana_carnes extends javax.swing.JFrame {
                         .addGap(91, 91, 91))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(226, 226, 226)
-                        .addComponent(jLabel6)
+                        .addComponent(lblStockPollo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel7)
+                        .addComponent(lblStockHamburguesa)
                         .addGap(58, 58, 58))))
         );
         jPanel3Layout.setVerticalGroup(
@@ -136,9 +169,9 @@ public class Ventana_carnes extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7))
+                    .addComponent(lblStockTernera)
+                    .addComponent(lblStockPollo)
+                    .addComponent(lblStockHamburguesa))
                 .addContainerGap(108, Short.MAX_VALUE))
         );
 
@@ -187,10 +220,116 @@ public class Ventana_carnes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonAtras(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonAtras
-          Gestor_Stock gs = new Gestor_Stock();
-          gs.setVisible(true);
-          dispose();
+        Gestor_Stock gs = new Gestor_Stock();
+        gs.setVisible(true);
+        dispose();
     }//GEN-LAST:event_BotonAtras
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+        com.mycompany.dao.ProductoDAO dao = new com.mycompany.dao.ProductoDAO();
+        com.mycompany.app.Carrito carrito = com.mycompany.app.Carrito.getInstancia();
+        try {
+            com.mycompany.app.Producto p = dao.buscarPorId(4);
+            if (p != null) {
+                if (carrito.getCantidadProducto(4) + 1 > p.getStock()) {
+                    javax.swing.JOptionPane.showMessageDialog(this, "¡Stock agotado!", "Aviso", javax.swing.JOptionPane.WARNING_MESSAGE);
+                    return;
+                }
+                carrito.anadirProducto(p, 1);
+                cargarDatosStock();
+                javax.swing.JOptionPane.showMessageDialog(this, "Añadido: " + p.getNombre());
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        // TODO add your handling code here:
+        com.mycompany.dao.ProductoDAO dao = new com.mycompany.dao.ProductoDAO();
+        com.mycompany.app.Carrito carrito = com.mycompany.app.Carrito.getInstancia();
+        try {
+            com.mycompany.app.Producto p = dao.buscarPorId(5);
+            if (p != null) {
+                if (carrito.getCantidadProducto(5) + 1 > p.getStock()) {
+                    javax.swing.JOptionPane.showMessageDialog(this, "¡Stock agotado!", "Aviso", javax.swing.JOptionPane.WARNING_MESSAGE);
+                    return;
+                }
+                carrito.anadirProducto(p, 1);
+                cargarDatosStock();
+                javax.swing.JOptionPane.showMessageDialog(this, "Añadido: " + p.getNombre());
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        // TODO add your handling code here:
+        com.mycompany.dao.ProductoDAO dao = new com.mycompany.dao.ProductoDAO();
+        com.mycompany.app.Carrito carrito = com.mycompany.app.Carrito.getInstancia();
+        try {
+            com.mycompany.app.Producto p = dao.buscarPorId(4);
+            if (p != null) {
+                if (carrito.getCantidadProducto(6) + 1 > p.getStock()) {
+                    javax.swing.JOptionPane.showMessageDialog(this, "¡Stock agotado!", "Aviso", javax.swing.JOptionPane.WARNING_MESSAGE);
+                    return;
+                }
+                carrito.anadirProducto(p, 1);
+                cargarDatosStock();
+                javax.swing.JOptionPane.showMessageDialog(this, "Añadido: " + p.getNombre());
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        com.mycompany.app.Carrito carrito = com.mycompany.app.Carrito.getInstancia();
+
+        if (carrito.getListaElementos().isEmpty()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "La cesta está vacía. ¡Añade productos primero!");
+        } else {
+            //Construimos el texto del ticket
+            StringBuilder mensaje = new StringBuilder();
+            mensaje.append("=== TU COMPRA ACTUAL ===\n\n");
+
+            for (com.mycompany.app.Carrito.ElementoCarrito item : carrito.getListaElementos()) {
+                mensaje.append("• ").append(item.getProducto().getNombre())
+                        .append("  (x").append(item.getCantidad()).append(")")
+                        .append("  ->  ").append(String.format("%.2f", item.getImporteTotal())).append("€\n");
+            }
+
+            mensaje.append("\n========================\n");
+            mensaje.append("TOTAL: ").append(String.format("%.2f", carrito.calcularTotal())).append("€");
+
+            //Definimos los botones que queremos que salgan
+            Object[] botones = {"Ir a Pagar", "Seguir Comprando"};
+
+            //Mostramos la ventana con opciones
+            int opcionElegida = javax.swing.JOptionPane.showOptionDialog(
+                    this,
+                    mensaje.toString(),
+                    "Revisar Cesta",
+                    javax.swing.JOptionPane.YES_NO_OPTION,
+                    javax.swing.JOptionPane.QUESTION_MESSAGE,
+                    null,
+                    botones,
+                    botones[1] // Botón seleccionado por defecto
+            );
+
+            //Actuamos según lo que haya pulsado
+            if (opcionElegida == 0) {
+         
+                new Ventana_pago().setVisible(true);
+                this.dispose();
+            }
+            
+        }
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -227,19 +366,69 @@ public class Ventana_carnes extends javax.swing.JFrame {
         });
     }
 
+    private void cargarDatosStock() {
+        com.mycompany.dao.ProductoDAO dao = new com.mycompany.dao.ProductoDAO();
+        com.mycompany.app.Carrito carrito = com.mycompany.app.Carrito.getInstancia();
+
+        try {
+            // ID 4: Ternera
+            com.mycompany.app.Producto p4 = dao.buscarPorId(4);
+            if (p4 != null) {
+                int stock = p4.getStock() - carrito.getCantidadProducto(4);
+                lblStockTernera.setText(p4.getNombre() + " - Stock: " + stock);
+                if (stock <= 0) {
+                    lblStockTernera.setText("AGOTADO");
+                    lblStockTernera.setForeground(java.awt.Color.RED);
+                } else {
+                    lblStockTernera.setForeground(java.awt.Color.BLACK);
+                }
+            }
+
+            // ID 5: Pollo
+            com.mycompany.app.Producto p5 = dao.buscarPorId(5);
+            if (p5 != null) {
+                int stock = p5.getStock() - carrito.getCantidadProducto(5);
+                lblStockPollo.setText(p5.getNombre() + " - Stock: " + stock);
+                if (stock <= 0) {
+                    lblStockPollo.setText("AGOTADO");
+                    lblStockPollo.setForeground(java.awt.Color.RED);
+                } else {
+                    lblStockPollo.setForeground(java.awt.Color.BLACK);
+                }
+            }
+
+            // ID 6: Hamburguesa
+            com.mycompany.app.Producto p6 = dao.buscarPorId(6);
+            if (p6 != null) {
+                int stock = p6.getStock() - carrito.getCantidadProducto(6);
+                lblStockHamburguesa.setText(p6.getNombre() + " - Stock: " + stock);
+                if (stock <= 0) {
+                    lblStockHamburguesa.setText("AGOTADO");
+                    lblStockHamburguesa.setForeground(java.awt.Color.RED);
+                } else {
+                    lblStockHamburguesa.setForeground(java.awt.Color.BLACK);
+                }
+            }
+
+        } catch (Exception e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Error stock: " + e.getMessage());
+        }
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JLabel lblStockHamburguesa;
+    private javax.swing.JLabel lblStockPollo;
+    private javax.swing.JLabel lblStockTernera;
     // End of variables declaration//GEN-END:variables
 }
