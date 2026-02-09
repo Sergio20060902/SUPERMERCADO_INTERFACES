@@ -13,8 +13,9 @@ public class ClienteDAO {
 
     // ➕ Insertar cliente
     public void insertar(Cliente cliente) throws SQLException {
-        String sql = "INSERT INTO clientes (nombre, apellidos, dni, telefono, email, direccion, ciudad) " +
-                     "VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+        String sql = "INSERT INTO clientes (nombre, apellidos, dni, telefono, email) " +
+                     "VALUES (?, ?, ?, ?, ?)";
 
         try (Connection con = ConexionBD.getConexion();
              PreparedStatement ps = con.prepareStatement(sql)) {
@@ -24,8 +25,6 @@ public class ClienteDAO {
             ps.setString(3, cliente.getDni());
             ps.setString(4, cliente.getTelefono());
             ps.setString(5, cliente.getEmail());
-            ps.setString(6, cliente.getDireccion());
-            ps.setString(7, cliente.getCiudad());
 
             ps.executeUpdate();
         }
@@ -33,6 +32,7 @@ public class ClienteDAO {
 
     // 📋 Listar todos los clientes
     public List<Cliente> listar() throws SQLException {
+
         List<Cliente> lista = new ArrayList<>();
         String sql = "SELECT * FROM clientes";
 
@@ -47,9 +47,7 @@ public class ClienteDAO {
                         rs.getString("apellidos"),
                         rs.getString("dni"),
                         rs.getString("telefono"),
-                        rs.getString("email"),
-                        rs.getString("direccion"),
-                        rs.getString("ciudad")
+                        rs.getString("email")
                 ));
             }
         }
@@ -59,6 +57,7 @@ public class ClienteDAO {
 
     // 🔍 Buscar cliente por ID
     public Cliente buscarPorId(int id) throws SQLException {
+
         String sql = "SELECT * FROM clientes WHERE id = ?";
         Cliente cliente = null;
 
@@ -66,19 +65,18 @@ public class ClienteDAO {
              PreparedStatement ps = con.prepareStatement(sql)) {
 
             ps.setInt(1, id);
-            ResultSet rs = ps.executeQuery();
 
-            if (rs.next()) {
-                cliente = new Cliente(
-                        rs.getInt("id"),
-                        rs.getString("nombre"),
-                        rs.getString("apellidos"),
-                        rs.getString("dni"),
-                        rs.getString("telefono"),
-                        rs.getString("email"),
-                        rs.getString("direccion"),
-                        rs.getString("ciudad")
-                );
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    cliente = new Cliente(
+                            rs.getInt("id"),
+                            rs.getString("nombre"),
+                            rs.getString("apellidos"),
+                            rs.getString("dni"),
+                            rs.getString("telefono"),
+                            rs.getString("email")
+                    );
+                }
             }
         }
 
@@ -87,8 +85,9 @@ public class ClienteDAO {
 
     // ✏ Actualizar cliente
     public void actualizar(Cliente cliente) throws SQLException {
+
         String sql = "UPDATE clientes SET nombre = ?, apellidos = ?, dni = ?, telefono = ?, " +
-                     "email = ?, direccion = ?, ciudad = ? WHERE id = ?";
+                     "email = ? WHERE id = ?";
 
         try (Connection con = ConexionBD.getConexion();
              PreparedStatement ps = con.prepareStatement(sql)) {
@@ -98,9 +97,7 @@ public class ClienteDAO {
             ps.setString(3, cliente.getDni());
             ps.setString(4, cliente.getTelefono());
             ps.setString(5, cliente.getEmail());
-            ps.setString(6, cliente.getDireccion());
-            ps.setString(7, cliente.getCiudad());
-            ps.setInt(8, cliente.getId());
+            ps.setInt(6, cliente.getId());
 
             ps.executeUpdate();
         }
@@ -108,6 +105,7 @@ public class ClienteDAO {
 
     // ❌ Eliminar cliente
     public void eliminar(int id) throws SQLException {
+
         String sql = "DELETE FROM clientes WHERE id = ?";
 
         try (Connection con = ConexionBD.getConexion();

@@ -5,10 +5,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexionBD {
-    // Configuración de tu base de datos (cámbiala si es diferente)
+    // Configuración de tu bases de datos (cámbiala si es diferente)
     private static final String URL = "jdbc:mysql://localhost:3306/supermercado?useSSL=false&serverTimezone=UTC";
     private static final String USER = "root";
-    private static final String PASS = "root"; 
+    private static final String PASS = "123456"; 
 
    
     public static Connection getConexion() {
