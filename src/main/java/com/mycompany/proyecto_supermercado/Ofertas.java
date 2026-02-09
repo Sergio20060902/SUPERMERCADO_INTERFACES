@@ -4,6 +4,8 @@
  */
 package com.mycompany.proyecto_supermercado;
 
+import java.awt.event.MouseEvent;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -418,8 +420,9 @@ public class Ofertas extends javax.swing.JFrame {
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(204, 204, 204));
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cestaaaaas.png"))); // NOI18N
+        jButton7.setBackground(new java.awt.Color(51, 51, 51));
+        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton7.setText("Crea producto");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -434,9 +437,9 @@ public class Ofertas extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(58, 58, 58)
+                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton7)
-                .addGap(77, 77, 77)
                 .addComponent(jLabel19)
                 .addGap(44, 44, 44))
         );
@@ -445,10 +448,11 @@ public class Ofertas extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel19)
-                    .addComponent(jButton7))
-                .addGap(4, 4, 4)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel19))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 738, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -546,14 +550,14 @@ public class Ofertas extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_BotonAtras
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_jButton1MouseClicked
-
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        Ventana_ticket vp = new Ventana_ticket();
-        vp.setVisible(true);
+         Ventana_Crear_Producto p2 = new Ventana_Crear_Producto();
+    JFrame Ventana_Crear_Producto = new JFrame("Crear Producto");
+    Ventana_Crear_Producto.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); 
+    Ventana_Crear_Producto.setSize(730, 640);           
+    Ventana_Crear_Producto.setLocationRelativeTo(null); 
+    Ventana_Crear_Producto.add(p2);                     
+    Ventana_Crear_Producto.setVisible(true);
 
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -611,6 +615,10 @@ public class Ofertas extends javax.swing.JFrame {
         lblStockHamburguesa.setText("Stock: " + stockBurger + " uds.");
         lblStockHamburguesa.setForeground(stockBurger <= 0 ? java.awt.Color.RED : java.awt.Color.BLACK);
     }
+    
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {
+    // Escribe aquí lo que quieres que haga el botón al hacer click
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

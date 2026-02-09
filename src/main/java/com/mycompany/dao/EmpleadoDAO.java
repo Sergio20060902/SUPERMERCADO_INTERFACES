@@ -81,6 +81,19 @@ public class EmpleadoDAO {
             ps.executeUpdate();
         }
     }
+    // 🗑 Borrar empleado por ID
+public void borrar(int id) throws SQLException {
+
+    String sql = "DELETE FROM empleados WHERE id = ?";
+
+    try (Connection con = ConexionBD.getConexion();
+         PreparedStatement ps = con.prepareStatement(sql)) {
+
+        ps.setInt(1, id);
+        ps.executeUpdate();
+    }
+}
+
 
     // 🧠 Mapper privado
     private Empleado mapearEmpleado(ResultSet rs) throws SQLException {
