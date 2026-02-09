@@ -314,7 +314,7 @@ public class Menu extends javax.swing.JFrame {
         Ventana_informes vi = new Ventana_informes();
         vi.setLocationRelativeTo(null);
         vi.setVisible(true);
-        this.dispose();
+        
         
     }//GEN-LAST:event_informebtnActionPerformed
 
